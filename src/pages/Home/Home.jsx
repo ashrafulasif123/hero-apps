@@ -1,7 +1,10 @@
+import Banner from "./Banner";
+
 const Home = () => {
     return (
         <div>
-           <h2>Hero Apps Home</h2> 
+            {/* <h2>Hero Apps Home</h2>  */}
+            <Banner></Banner>
         </div>
     );
 };

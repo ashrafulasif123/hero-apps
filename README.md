@@ -1,4 +1,6 @@
 # Projects Note
 
 ## Navbar
-- Navlink(active link using tailwind css)
+-Navbar Responsive
+-Active Link When visited Page
+-Show And Hide Navbar

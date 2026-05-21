@@ -8,9 +8,9 @@ const Root = () => {
                 <Navbar></Navbar>
             </header>
             <main>
-                <div className="max-w-325 mx-auto">
-                    <Outlet />
-                </div>
+                {/* <div className="max-w-325 mx-auto px-4 2xl:px-0"> */}
+                <Outlet />
+                {/* </div> */}
             </main>
             <footer></footer>
         </div>

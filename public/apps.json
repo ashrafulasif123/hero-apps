@@ -1,0 +1,362 @@
+[
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkYrvAF3JwDYNDhPqa_wccirbFSMuUo5rshA&s",
+      "title": "ChatFlow",
+      "companyName": "TechNova",
+      "id": 1,
+      "description": "A smart messaging app with AI-powered replies and cloud sync.",
+      "size": 45,
+      "reviews": 12450,
+      "ratingAvg": 4.7,
+      "downloads": 500000,
+      "ratings": [
+        { "name": "1 star", "count": 120 },
+        { "name": "2 star", "count": 220 },
+        { "name": "3 star", "count": 650 },
+        { "name": "4 star", "count": 3200 },
+        { "name": "5 star", "count": 8260 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/blZS6cfN9O64_U1J_oJJoabDnrdaMCMWGmgCmQ89Ef_5U29QrRjCQnjxsBIUmiMGcA",
+      "title": "FitPulse",
+      "companyName": "HealthCore",
+      "id": 2,
+      "description": "Track workouts, calories, and daily health activities easily.",
+      "size": 68,
+      "reviews": 8450,
+      "ratingAvg": 4.5,
+      "downloads": 300000,
+      "ratings": [
+        { "name": "1 star", "count": 100 },
+        { "name": "2 star", "count": 180 },
+        { "name": "3 star", "count": 720 },
+        { "name": "4 star", "count": 2500 },
+        { "name": "5 star", "count": 4950 }
+      ]
+    },
+    {
+      "image": "https://cdn.aptoide.com/imgs/c/e/d/cedc346e40f4dd57c6b52d29e95077ec_icon.png",
+      "title": "Musicfy",
+      "companyName": "SoundWave Ltd",
+      "id": 3,
+      "description": "Listen to millions of songs with offline playback support.",
+      "size": 82,
+      "reviews": 19400,
+      "ratingAvg": 4.8,
+      "downloads": 1200000,
+      "ratings": [
+        { "name": "1 star", "count": 150 },
+        { "name": "2 star", "count": 250 },
+        { "name": "3 star", "count": 900 },
+        { "name": "4 star", "count": 4500 },
+        { "name": "5 star", "count": 13600 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk_pAEiNX6roW_qFY8-q7i8jta3bygD3Gf4w&s",
+      "title": "NoteBuddy",
+      "companyName": "DailyApps",
+      "id": 4,
+      "description": "Create notes, to-do lists, and reminders in one place.",
+      "size": 25,
+      "reviews": 5200,
+      "ratingAvg": 4.3,
+      "downloads": 150000,
+      "ratings": [
+        { "name": "1 star", "count": 90 },
+        { "name": "2 star", "count": 170 },
+        { "name": "3 star", "count": 530 },
+        { "name": "4 star", "count": 1800 },
+        { "name": "5 star", "count": 2610 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/k7P7qxhX6ovCgtmXSubTxCHj7VRHNk6p_ZVxUVtRRzyANOdmr5bufbi5HRwWGJq6MQ1W=w240-h480-rw",
+      "title": "TravelGo",
+      "companyName": "SkyRoute",
+      "id": 5,
+      "description": "Book flights, hotels, and tours from a single app.",
+      "size": 91,
+      "reviews": 7400,
+      "ratingAvg": 4.6,
+      "downloads": 400000,
+      "ratings": [
+        { "name": "1 star", "count": 80 },
+        { "name": "2 star", "count": 150 },
+        { "name": "3 star", "count": 600 },
+        { "name": "4 star", "count": 2200 },
+        { "name": "5 star", "count": 4370 }
+      ]
+    },
+    {
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0c/4f/21/0c4f2121-ad40-af16-728c-8820c3f96fe1/AppIcon-0-0-1x_U007emarketing-0-9-0-0-85-220.jpeg/1200x630wa.jpg",
+      "title": "LearnHub",
+      "companyName": "EduSmart",
+      "id": 6,
+      "description": "Interactive online learning platform for students.",
+      "size": 74,
+      "reviews": 9800,
+      "ratingAvg": 4.7,
+      "downloads": 650000,
+      "ratings": [
+        { "name": "1 star", "count": 110 },
+        { "name": "2 star", "count": 200 },
+        { "name": "3 star", "count": 700 },
+        { "name": "4 star", "count": 3000 },
+        { "name": "5 star", "count": 5790 }
+      ]
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/N4fMq2bg007YSOo-2Srg5vU-na-tGjf1IBKhbBpmyfyXsWd4vk7XG1gQeBoWFmW8dpvO6iMlJTcH4hFAW1i-i_8g1gt4sNpeZm5eFw=h200",
+      "title": "PhotoPro",
+      "companyName": "PixelCraft",
+      "id": 7,
+      "description": "Edit photos professionally with AI enhancement tools.",
+      "size": 110,
+      "reviews": 11200,
+      "ratingAvg": 4.4,
+      "downloads": 720000,
+      "ratings": [
+        { "name": "1 star", "count": 210 },
+        { "name": "2 star", "count": 310 },
+        { "name": "3 star", "count": 1100 },
+        { "name": "4 star", "count": 3600 },
+        { "name": "5 star", "count": 5980 }
+      ]
+    },
+    {
+      "image": "https://macmenubar.com/weatherly/",
+      "title": "Weatherly",
+      "companyName": "ClimateX",
+      "id": 8,
+      "description": "Get accurate weather forecasts and storm alerts.",
+      "size": 33,
+      "reviews": 4300,
+      "ratingAvg": 4.2,
+      "downloads": 210000,
+      "ratings": [
+        { "name": "1 star", "count": 130 },
+        { "name": "2 star", "count": 240 },
+        { "name": "3 star", "count": 620 },
+        { "name": "4 star", "count": 1400 },
+        { "name": "5 star", "count": 1910 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/KAEc8-pAmmynJk1D9OFbYeETBUN1ZXKFeVipJGxycTFk8kzVaXF0Kjzhx5Jw9yZS31I",
+      "title": "Gamix",
+      "companyName": "PlayVerse",
+      "id": 9,
+      "description": "Play trending multiplayer games with friends online.",
+      "size": 156,
+      "reviews": 28700,
+      "ratingAvg": 4.9,
+      "downloads": 2500000,
+      "ratings": [
+        { "name": "1 star", "count": 100 },
+        { "name": "2 star", "count": 180 },
+        { "name": "3 star", "count": 500 },
+        { "name": "4 star", "count": 4200 },
+        { "name": "5 star", "count": 23720 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/8h-vibuWccUfYDXsoP1M3Z7XHQlxCuMV-OvAEepcnYXSUUOETgdfcnBCSbCjLJ4iTwmY",
+      "title": "TaskHero",
+      "companyName": "Productive Labs",
+      "id": 10,
+      "description": "Manage tasks, projects, and team collaboration easily.",
+      "size": 58,
+      "reviews": 6900,
+      "ratingAvg": 4.5,
+      "downloads": 340000,
+      "ratings": [
+        { "name": "1 star", "count": 90 },
+        { "name": "2 star", "count": 160 },
+        { "name": "3 star", "count": 700 },
+        { "name": "4 star", "count": 2200 },
+        { "name": "5 star", "count": 3750 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXfZ9wJ6n4xVjMDq29vQh7AeKJAaHIRAvpRA&s",
+      "title": "ShopKart",
+      "companyName": "MegaBuy",
+      "id": 11,
+      "description": "Online shopping app with fast delivery and discounts.",
+      "size": 89,
+      "reviews": 17400,
+      "ratingAvg": 4.6,
+      "downloads": 1800000,
+      "ratings": [
+        { "name": "1 star", "count": 210 },
+        { "name": "2 star", "count": 300 },
+        { "name": "3 star", "count": 1000 },
+        { "name": "4 star", "count": 4500 },
+        { "name": "5 star", "count": 11390 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ16gF2QB2B8vy7b1LNJtDfsscUpkrfDt6Jjw&s",
+      "title": "FinMate",
+      "companyName": "MoneySoft",
+      "id": 12,
+      "description": "Track expenses, budgets, and financial goals securely.",
+      "size": 49,
+      "reviews": 5800,
+      "ratingAvg": 4.4,
+      "downloads": 260000,
+      "ratings": [
+        { "name": "1 star", "count": 100 },
+        { "name": "2 star", "count": 200 },
+        { "name": "3 star", "count": 650 },
+        { "name": "4 star", "count": 1800 },
+        { "name": "5 star", "count": 3050 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/c2xdYRZGhMeF5OoAVa-Qvs_cdx7QwmlTgDQ_35n35vYb5u-mi9XZNp551ZQDKF0P_nc",
+      "title": "MovieBox",
+      "companyName": "Streamify",
+      "id": 13,
+      "description": "Watch movies and TV shows in HD quality anytime.",
+      "size": 140,
+      "reviews": 22600,
+      "ratingAvg": 4.8,
+      "downloads": 3200000,
+      "ratings": [
+        { "name": "1 star", "count": 180 },
+        { "name": "2 star", "count": 250 },
+        { "name": "3 star", "count": 700 },
+        { "name": "4 star", "count": 5200 },
+        { "name": "5 star", "count": 16270 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4MQ1hU63IOpFjAmk9uokdy8Ug73ipEpQTKA&s",
+      "title": "LanguageGo",
+      "companyName": "LinguaTech",
+      "id": 14,
+      "description": "Learn new languages with fun quizzes and lessons.",
+      "size": 64,
+      "reviews": 8700,
+      "ratingAvg": 4.6,
+      "downloads": 540000,
+      "ratings": [
+        { "name": "1 star", "count": 90 },
+        { "name": "2 star", "count": 170 },
+        { "name": "3 star", "count": 690 },
+        { "name": "4 star", "count": 2500 },
+        { "name": "5 star", "count": 5250 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/pdvM0BZF-TLRuqjdArwAkzb4gZbfH0eVCji68Pj3gRyVn-4tessTyDCJ0QoHhJ-5xy8",
+      "title": "SecureVPN",
+      "companyName": "CyberSafe",
+      "id": 15,
+      "description": "Protect your online privacy with fast VPN servers.",
+      "size": 38,
+      "reviews": 9300,
+      "ratingAvg": 4.3,
+      "downloads": 890000,
+      "ratings": [
+        { "name": "1 star", "count": 220 },
+        { "name": "2 star", "count": 340 },
+        { "name": "3 star", "count": 950 },
+        { "name": "4 star", "count": 2700 },
+        { "name": "5 star", "count": 5090 }
+      ]
+    },
+    {
+      "image": "https://play-lh.googleusercontent.com/T2j60rPrudisoVTzUKbvE0DJuCh1pUQRuMsxjHOf3s82tVOr_l0ikBHBEAC2a2HKib691YQ3cxt8GjQWjp5q",
+      "title": "RecipeHub",
+      "companyName": "CookMaster",
+      "id": 16,
+      "description": "Discover and save delicious recipes from around the world.",
+      "size": 52,
+      "reviews": 3900,
+      "ratingAvg": 4.1,
+      "downloads": 180000,
+      "ratings": [
+        { "name": "1 star", "count": 140 },
+        { "name": "2 star", "count": 240 },
+        { "name": "3 star", "count": 680 },
+        { "name": "4 star", "count": 1100 },
+        { "name": "5 star", "count": 1740 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt0QtlNe6O9_biKFmMNCVNH-2Y7wEQu2j2kw&s",
+      "title": "NewsFlash",
+      "companyName": "Global Media",
+      "id": 17,
+      "description": "Stay updated with breaking news from trusted sources.",
+      "size": 41,
+      "reviews": 7600,
+      "ratingAvg": 4.2,
+      "downloads": 470000,
+      "ratings": [
+        { "name": "1 star", "count": 170 },
+        { "name": "2 star", "count": 280 },
+        { "name": "3 star", "count": 820 },
+        { "name": "4 star", "count": 2300 },
+        { "name": "5 star", "count": 4030 }
+      ]
+    },
+    {
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a2/d8/bf/a2d8bf28-92a3-f1b0-9832-98e45ec0a629/Placeholder.mill/1200x630wa.jpg",
+      "title": "KidLearn",
+      "companyName": "BrightFuture",
+      "id": 18,
+      "description": "Educational games and activities designed for children.",
+      "size": 77,
+      "reviews": 4500,
+      "ratingAvg": 4.7,
+      "downloads": 290000,
+      "ratings": [
+        { "name": "1 star", "count": 60 },
+        { "name": "2 star", "count": 110 },
+        { "name": "3 star", "count": 430 },
+        { "name": "4 star", "count": 1400 },
+        { "name": "5 star", "count": 2500 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6e-zhD__tgPJtftdt2RsmdEdQS5Zmuy7ElQ&s",
+      "title": "CareRide",
+      "companyName": "UrbanMove",
+      "id": 19,
+      "description": "Book rides quickly with affordable transport options.",
+      "size": 66,
+      "reviews": 14300,
+      "ratingAvg": 4.5,
+      "downloads": 950000,
+      "ratings": [
+        { "name": "1 star", "count": 190 },
+        { "name": "2 star", "count": 270 },
+        { "name": "3 star", "count": 890 },
+        { "name": "4 star", "count": 4200 },
+        { "name": "5 star", "count": 8750 }
+      ]
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD_u6qC5oEOaH59NKANfFZ6_72m722Fnzf1A&s",
+      "title": "CloudSync",
+      "companyName": "DataNest",
+      "id": 20,
+      "description": "Backup and sync files securely across all devices.",
+      "size": 59,
+      "reviews": 6800,
+      "ratingAvg": 4.6,
+      "downloads": 610000,
+      "ratings": [
+        { "name": "1 star", "count": 80 },
+        { "name": "2 star", "count": 150 },
+        { "name": "3 star", "count": 620 },
+        { "name": "4 star", "count": 2100 },
+        { "name": "5 star", "count": 3850 }
+      ]
+    }
+  ]

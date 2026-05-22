@@ -1,0 +1,137 @@
+import { FaDownload, FaRegCommentDots, FaStar } from "react-icons/fa";
+import { useLoaderData, useParams } from "react-router";
+import { getInstalledAppIdsFromLS, setInstallAppsIdsToLS } from "../../utilities/utilities";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+
+const AppDetails = () => {
+    const { id } = useParams()
+    const appId = parseInt(id)
+    const apps = useLoaderData()
+
+    const [installedIds, setInstalledIds] = useState([])
+    // আলাদা ‍State for install button
+    /* const [installButton, setInstallButton] = useState(false) */
+    const appDetails = apps.find(app => app.id === appId)
+    const { image, title, description, companyName, downloads, size, ratingAvg, reviews } = appDetails
+
+
+    useEffect(() => {
+        const installedAppIdsLSString = getInstalledAppIdsFromLS()
+        const installedAppIdsLS = installedAppIdsLSString.map(i => parseInt(i))
+        setInstalledIds(installedAppIdsLS)
+        // আলাদা ‍State for install button
+        /* if (installedAppIdsLS.includes(appId)) {
+            setInstallButton(true)
+        } */
+    }, [])
+
+    const handleAddToInstall = () => {
+        if (installedIds.includes(appId)) {
+            toast("You have already installed this app")
+            return
+        }
+        setInstallAppsIdsToLS(appId)
+        const updated = getInstalledAppIdsFromLS().map((i) => parseInt(i));
+        setInstalledIds(updated);
+        toast("You have successfully installed")
+        // আলাদা ‍State for install button
+        /* setInstallButton(true) */
+
+    }
+    return (
+        <div className="max-w-400 mx-auto">
+            <div className="flex flex-col gap-6 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm md:flex-row mt-10">
+
+                {/* App Image */}
+                <div className="shrink-0">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="h-60 w-60 rounded-3xl object-cover"
+                    />
+                </div>
+
+                {/* App Details */}
+                <div className="flex-1 space-y-5">
+
+                    {/* Title */}
+                    <div>
+                        <h1 className="text-3xl font-bold text-gray-900">
+                            {title}
+                        </h1>
+
+                        <p className="mt-2 text-base leading-7 text-gray-600">
+                            {description}
+                        </p>
+                    </div>
+
+                    {/* Developer */}
+                    <div>
+                        <p className="text-lg font-medium text-gray-700">
+                            Developed by:
+                            <span className="ml-2 font-semibold text-[#632EE3]">
+                                {companyName}
+                            </span>
+                        </p>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="flex flex-wrap items-center gap-6 border-t border-gray-100 pt-4">
+
+                        <div className="flex items-center gap-3">
+                            <div className="rounded-full bg-[#EEE8FF] p-3">
+                                <FaDownload className="text-xl text-[#632EE3]" />
+                            </div>
+
+                            <div>
+                                <p className="text-sm text-gray-500">
+                                    Downloads
+                                </p>
+
+                                <p className="text-lg font-bold text-gray-800">
+                                    {downloads}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <div className="rounded-full bg-yellow-100 p-3">
+                                <FaStar className="text-xl text-yellow-500" />
+                            </div>
+
+                            <div>
+                                <p className="text-sm text-gray-500">
+                                    Rating
+                                </p>
+
+                                <p className="text-lg font-bold text-gray-800">
+                                    {ratingAvg}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <div className="rounded-full bg-green-100 p-3">
+                                <FaRegCommentDots className="text-xl text-green-600" />
+                            </div>
+
+                            <div>
+                                <p className="text-sm text-gray-500">
+                                    Reviews
+                                </p>
+
+                                <p className="text-lg font-bold text-gray-800">
+                                    {reviews}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className="btn btn-success text-white">Install Now ({size})MB</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default AppDetails;

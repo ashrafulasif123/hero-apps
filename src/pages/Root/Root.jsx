@@ -1,16 +1,27 @@
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Navbar from "../../components/Header/Navbar/Navbar";
+import { ToastContainer } from "react-toastify";
 
 const Root = () => {
+    const navigation = useNavigation()
     return (
-        <div>
+        <div className="relative min-h-screen">
             <header>
                 <Navbar></Navbar>
             </header>
             <main>
-                {/* <div className="max-w-325 mx-auto px-4 2xl:px-0"> */}
-                <Outlet />
-                {/* </div> */}
+                <ToastContainer />
+                {
+                    navigation.state === "loading"
+                        ?
+                        <div className="absolute inset-0 flex justify-center items-center">
+                            <p className="text-2xl">Loading....</p>
+                        </div>
+                        :
+                        <Outlet />
+                }
+
+
             </main>
             <footer></footer>
         </div>

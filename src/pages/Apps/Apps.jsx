@@ -1,7 +1,39 @@
+import { useLoaderData } from "react-router";
+import Title from "../../components/Title/Title";
+import App from "../App/App";
+
 const Apps = () => {
+    const apps = useLoaderData()
     return (
-        <div>
-            <h1>Apps</h1>
+        <div className="bg-base-200 py-15">
+            <Title title="Our All Applications" subTitle="Explore All Apps on the Market developed by us. We code for Millions"></Title>
+
+            <div className="py-12 max-w-400 mx-auto">
+                <div className="flex justify-between items-center py-5">
+                    <h2 className="font-bold text-2xl">({apps.length}) Apps Found</h2>
+                    <label className="input">
+                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g
+                                strokeLinejoin="round"
+                                strokeLinecap="round"
+                                strokeWidth="2.5"
+                                fill="none"
+                                stroke="currentColor"
+                            >
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input type="search" className="grow" placeholder="Search" />
+                    </label>
+                </div>
+                <div className="grid grid-cols-4 gap-4">
+                    {
+                        apps.map(app => <App key={app.id} app={app} link="app"></App>)
+                    }
+                </div>
+
+            </div>
         </div>
     );
 };

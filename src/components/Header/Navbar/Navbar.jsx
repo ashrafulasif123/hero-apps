@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return (
         <nav className="py-4 border-b border-gray-300">
-            <div className="relative px-4 2xl:px-0 max-w-325 mx-auto flex justify-between items-center">
+            <div className="relative px-4 2xl:px-0 max-w-400 mx-auto flex justify-between items-center">
                 <GiHamburgerMenu onClick={() => setShowNavbar(!showNavbar)} className="block md:hidden h-6 w-6 text-[#632EE3]" />
                 <Link to="/">
                     <div className="flex items-center gap-2">
@@ -32,7 +32,7 @@ const Navbar = () => {
                     <NavLink className={navClass} to="/installation">Installation</NavLink>
                 </ul>
                 <a
-                    href="https://github.com/ashrafulasif123"
+                    href="https://github.com/ProgrammingHero1/B12-A08-Hero-Apps"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn text-white bg-[#632EE3] rounded-md flex items-center gap-2"

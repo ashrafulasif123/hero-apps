@@ -20,7 +20,7 @@ const Home = () => {
                     <Title title="Trending Apps" subTitle="Explore All Trending Apps on the Market developed by us"></Title>
                     <div className="grid grid-cols-4 gap-4">
                         {
-                            trendingApps.map(app => <App key={app.id} app={app}></App>)
+                            trendingApps.map(app => <App key={app.id} app={app} home></App>)
                         }
                     </div>
                     <div className="flex justify-center mt-10">

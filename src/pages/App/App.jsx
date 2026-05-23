@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const App = ({ app, link }) => {
+const App = ({ app, link, home }) => {
     const { id, title, image, downloads, ratingAvg } = app
     const appContainer = <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
         <img
@@ -28,10 +28,20 @@ const App = ({ app, link }) => {
                     ⭐ {ratingAvg}
                 </p>
             </div>
+            {
+                home ? (
+                    <Link to={`/appDetails/${id}`}>
+                        <button className="w-full rounded-xl bg-[#632EE3] py-2.5 font-medium text-white transition hover:opacity-90">
+                            View Details
+                        </button>
+                    </Link>
+                )
+                    :
+                    (<button className="w-full rounded-xl bg-[#632EE3] py-2.5 font-medium text-white transition hover:opacity-90">
+                        View Details
+                    </button>)
+            }
 
-            <button className="w-full rounded-xl bg-[#632EE3] py-2.5 font-medium text-white transition hover:opacity-90">
-                View Details
-            </button>
         </div>
     </div>
     return (

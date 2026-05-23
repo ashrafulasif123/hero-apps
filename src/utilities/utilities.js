@@ -1,5 +1,3 @@
-
-
 const getInstalledAppIdsFromLS = () => {
     return JSON.parse(localStorage.getItem("appIds")) || []
 }

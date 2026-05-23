@@ -9,19 +9,19 @@ const AppDetails = () => {
     const appId = parseInt(id)
     const apps = useLoaderData()
 
-    
-    const [installedIds, setInstalledIds] = useState([])
+    const getIds = () => getInstalledAppIdsFromLS().map(i => parseInt(i))
+    const [installedIds, setInstalledIds] = useState(() => getIds())
     const appDetails = apps.find(app => app.id === appId)
     const { image, title, description, companyName, downloads, size, ratingAvg, reviews } = appDetails
 
     const handleAddToInstall = () => {
-        setInstalledIds(getInstalledAppIdsFromLS().map(i => parseInt(i)))
         if(installedIds.includes(appId)){
-            toast('This app already installed')
+            toast("This app is already installed")
             return
         }
         setInstallAppsIdsToLS(appId)
-        toast("Successfully Installed")
+        setInstalledIds(getIds())
+        toast("You have successfully installed")
     }
 
     return (

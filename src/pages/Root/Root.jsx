@@ -15,7 +15,9 @@ const Root = () => {
                     navigation.state === "loading"
                         ?
                         <div className="absolute inset-0 flex justify-center items-center">
-                            <p className="text-2xl">Loading....</p>
+                            <p className="text-2xl">
+                                <span className="loading loading-dots loading-xl"></span>
+                            </p>
                         </div>
                         :
                         <Outlet />

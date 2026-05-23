@@ -8,15 +8,28 @@ import { toast } from "react-toastify";
 const Installation = () => {
     const apps = useLoaderData()
     const [installedAppIds, setInstalledAppsIds] = useState(() => getInstalledAppIdsFromLS().map(i => parseInt(i)))
-    const installedApps = apps.filter(installedApp => installedAppIds.includes(installedApp.id))
+    const defaultInstalledApps = () => apps.filter(installedApp => installedAppIds.includes(installedApp.id))
+    const [installedApps, setInstalledApps] = useState(defaultInstalledApps())
 
     const handleUninstall = id => {
-        const updateInstalled = installedAppIds.filter(installedAppId => installedAppId !== id)
-        setInstalledAppsIds(updateInstalled)
+        const updateInstalledIds = installedAppIds.filter(installedAppId => installedAppId !== id)
+        setInstalledApps(installedApps.filter(installedApp => updateInstalledIds.includes(installedApp.id)))
         toast("You have Successfully Uninstalled This App")
-        localStorage.setItem("appIds", JSON.stringify(updateInstalled))
+        localStorage.setItem("appIds", JSON.stringify(updateInstalledIds))
     }
-
+    const handleSortByDownload = sortByDownload => {
+        if (sortByDownload === "high-to-low") {
+            const highToLow = [...installedApps].sort((a, b) => b.downloads - a.downloads)
+            setInstalledApps(highToLow)
+        }
+        else if (sortByDownload === "low-to-high") {
+            const lowToHigh = [...installedApps].sort((a, b) => a.downloads - b.downloads)
+            setInstalledApps(lowToHigh)
+        }
+        else {
+            setInstalledApps(defaultInstalledApps())
+        }
+    }
     return (
         <div className="bg-base-200 py-15">
             <Title title="Your Installed Apps" subTitle="Explore All Trending Apps on the Market developed by us"></Title>
@@ -24,10 +37,10 @@ const Installation = () => {
                 <div className="flex justify-between items-center py-5">
                     <h2 className="font-bold text-2xl">({installedAppIds.length}) Installed Apps </h2>
                     <select defaultValue="Medium" className="select select-md">
-                        <option disabled={true}>Sort By Size</option>
-                        <option>Medium Apple</option>
-                        <option>Medium Orange</option>
-                        <option>Medium Tomato</option>
+                        <option disabled={true}>Sort By Download</option>
+                        <option onClick={() => handleSortByDownload("default")}>Default</option>
+                        <option onClick={() => handleSortByDownload("high-to-low")}>High to Low</option>
+                        <option onClick={() => handleSortByDownload("low-to-high")}>Low to High</option>
                     </select>
                 </div>
                 <div className="flex flex-col gap-y-4">

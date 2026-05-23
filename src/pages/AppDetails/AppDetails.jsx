@@ -127,7 +127,7 @@ const AppDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className="btn btn-success text-white">Install Now ({size})MB</button>
+                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className="btn btn-success text-white"> {` ${!installedIds.includes(appId)} ? Install Now (${size})MB : 'Installed'`}</button>
                 </div>
             </div>
         </div>

@@ -6,8 +6,11 @@ import InstalledApps from "../InstalledApps/InstalledApps";
 import { toast } from "react-toastify";
 
 const Installation = () => {
+    const apps = useLoaderData()
 
-
+    const previousInstalledId = () => getInstalledAppIdsFromLS().map(i => parseInt(i))
+    const [installedId, setInstalledId] = useState(() => previousInstalledId())
+    const [installedApps, setInstalledApps] = useState(() => apps.filter(app => ))
 
 
     return (

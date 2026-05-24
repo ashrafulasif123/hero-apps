@@ -1,3 +1,7 @@
+/**
+Extra useState() Use for Install Button disabled or not
+*/
+
 import { FaDownload, FaRegCommentDots, FaStar } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
 import { getInstalledAppIdsFromLS, setInstallAppsIdsToLS } from "../../utilities/utilities";
@@ -9,8 +13,18 @@ const AppDetails = () => {
     const appId = parseInt(id)
     const apps = useLoaderData()
 
-    const getIds = () => getInstalledAppIdsFromLS().map(i => parseInt(i))
+
+    const [installButtonDisable, setInstallButtonDisable] = useState(false)
+    const getIds = () => {
+        const getIdsFromLs = getInstalledAppIdsFromLS().map(i => parseInt(i))
+        if (getIdsFromLs.includes(appId)) {
+            setInstallButtonDisable(true)
+        }
+        return getIdsFromLs
+    }
     const [installedIds, setInstalledIds] = useState(() => getIds())
+
+
     const appDetails = apps.find(app => app.id === appId)
     const { image, title, description, companyName, downloads, size, ratingAvg, reviews } = appDetails
 
@@ -22,6 +36,7 @@ const AppDetails = () => {
         setInstallAppsIdsToLS(appId)
         setInstalledIds(getIds())
         toast("You have successfully installed")
+        setInstallButtonDisable(true)
     }
 
     return (
@@ -112,7 +127,8 @@ const AppDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className={`btn ${installedIds.includes(appId) ? "btn-disabled text-red-600 font-bold" : "btn-success text-white"}`}>{installedIds.includes(appId) ? "Installed" : `Install Now: ${size} MB`}</button>
+
+                    <button onClick={handleAddToInstall} disabled={installButtonDisable} className={`btn ${installButtonDisable ? "btn-disabled text-red-600 font-bold" : "btn-success text-white"}`}>{installButtonDisable ? "Installed" : `Install Now: ${size} MB`}</button>
                 </div>
             </div>
         </div>

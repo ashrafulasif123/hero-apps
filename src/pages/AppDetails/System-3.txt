@@ -1,7 +1,10 @@
+/**
+    Using useEffect() Not recomended, delay button disabled when Loading
+*/
 import { FaDownload, FaRegCommentDots, FaStar } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
 import { getInstalledAppIdsFromLS, setInstallAppsIdsToLS } from "../../utilities/utilities";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 const AppDetails = () => {
@@ -9,19 +12,24 @@ const AppDetails = () => {
     const appId = parseInt(id)
     const apps = useLoaderData()
 
-    const getIds = () => getInstalledAppIdsFromLS().map(i => parseInt(i))
-    const [installedIds, setInstalledIds] = useState(() => getIds())
+
+    const [installedIds, setInstalledIds] = useState([])
+
+    useEffect(() => {
+        setInstalledIds(getInstalledAppIdsFromLS().map(i => parseInt(i)))
+    }, [])
+
     const appDetails = apps.find(app => app.id === appId)
     const { image, title, description, companyName, downloads, size, ratingAvg, reviews } = appDetails
 
     const handleAddToInstall = () => {
         if (installedIds.includes(appId)) {
-            toast("This app is already installed")
+            toast("You have already installed this app")
             return
         }
+        setInstalledIds([...installedIds, appId])
         setInstallAppsIdsToLS(appId)
-        setInstalledIds(getIds())
-        toast("You have successfully installed")
+        toast("App Installed")
     }
 
     return (
@@ -112,7 +120,7 @@ const AppDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className={`btn ${installedIds.includes(appId) ? "btn-disabled text-red-600 font-bold" : "btn-success text-white"}`}>{installedIds.includes(appId) ? "Installed" : `Install Now: ${size} MB`}</button>
+                    <button onClick={handleAddToInstall} disabled={installedIds.includes(appId)} className="btn btn-success text-white"> {installedIds.includes(appId) ? 'Installed' : `Install Now: ${size} MB`}</button>
                 </div>
             </div>
         </div>

@@ -7,7 +7,17 @@ const setInstallAppsIdsToLS = id => {
     const installedIds = [...previousInstalledIds, id]
     const installedIdsString = JSON.stringify(installedIds)
     localStorage.setItem("appIds", installedIdsString)
-   
+
 }
 
 export { getInstalledAppIdsFromLS, setInstallAppsIdsToLS }
+
+const getSortByDownloadsLS = () => {
+    return localStorage.getItem("sort") || ""
+}
+
+const setSortByDownloadsLS = sortByDownload => {
+    localStorage.setItem("sort", sortByDownload)
+}
+
+export { getSortByDownloadsLS, setSortByDownloadsLS }

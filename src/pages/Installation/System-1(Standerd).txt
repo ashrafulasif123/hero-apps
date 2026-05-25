@@ -1,6 +1,3 @@
-/*
-    With useEffect() better than System-3(without useEffect())
-*/
 
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";

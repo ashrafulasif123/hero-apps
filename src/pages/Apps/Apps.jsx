@@ -1,13 +1,30 @@
 import { useLoaderData } from "react-router";
 import Title from "../../components/Title/Title";
 import App from "../App/App";
+import { useState } from "react";
+import appErrorImg from "../../assets/images/App-Error.png"
 
 const Apps = () => {
-    const apps = useLoaderData()
-    return (
-        <div className="bg-base-200 py-15">
-            <Title title="Our All Applications" subTitle="Explore All Apps on the Market developed by us. We code for Millions"></Title>
+    const loaderApps = useLoaderData()
+    const [apps, setApps] = useState(loaderApps)
 
+    const handleAppsSearch = e => {
+        const searchApp =
+            e.target.value.toLowerCase()
+        if (searchApp === "") {
+            setApps(loaderApps)
+            return
+        }
+        const searchApps = loaderApps.filter(app =>
+            app.title.toLowerCase().includes(searchApp)
+        )
+        setApps(searchApps)
+    }
+    return (
+        <div className="bg-base-200 py-15 relative min-h-screen">
+            {
+                apps.length > 0 && <Title title="Our All Applications" subTitle="Explore All Apps on the Market developed by us. We code for Millions"></Title>
+            }
             <div className="py-12 max-w-400 mx-auto">
                 <div className="flex justify-between items-center py-5">
                     <h2 className="font-bold text-2xl">({apps.length}) Apps Found</h2>
@@ -24,15 +41,23 @@ const Apps = () => {
                                 <path d="m21 21-4.3-4.3"></path>
                             </g>
                         </svg>
-                        <input type="search" className="grow" placeholder="Search" />
+                        <input onChange={handleAppsSearch} type="search" className="grow" placeholder="Search" />
                     </label>
                 </div>
-                <div className="grid grid-cols-4 gap-4">
-                    {
-                        apps.map(app => <App key={app.id} app={app} link="app"></App>)
-                    }
-                </div>
 
+                {
+                    apps.length > 0
+                        ?
+                        <div className="grid grid-cols-4 gap-4">
+                            {
+                                apps.map(app => <App key={app.id} app={app} link="app"></App>)
+                            }
+                        </div>
+                        :
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <img src={appErrorImg} alt="" />
+                        </div>
+                }
             </div>
         </div>
     );

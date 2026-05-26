@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import errorImg from "../../assets/images/error-404.png"
 import Title from "../../components/Title/Title";
 
